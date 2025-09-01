@@ -1,0 +1,33 @@
+# Node
+node_modules
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.pnpm-mjs-debug.log*
+
+# Editor directories and files
+.vscode
+.idea
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.bak
+
+# Build artifacts
+dist
+build
+
+# Frontend specific
+Frontend/node_modules
+Frontend/dist
+
+# Backend specific
+src/db/
+src/config/
