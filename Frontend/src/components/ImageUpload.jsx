@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createPost } from '../services/api';
+import { useNavigate } from 'react-router-dom';
 
 function ImageUpload() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -7,6 +8,7 @@ function ImageUpload() {
   const [caption, setCaption] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -34,6 +36,7 @@ function ImageUpload() {
       const response = await createPost(formData);
       setCaption(response.data.post.caption);
       setMessage(response.data.message);
+      navigate('/posts')
     } catch (error) {
       setMessage(error.response?.data?.message || 'Image upload failed');
     } finally {

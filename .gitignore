@@ -27,7 +27,3 @@ build
 # Frontend specific
 Frontend/node_modules
 Frontend/dist
-
-# Backend specific
-src/db/
-src/config/
