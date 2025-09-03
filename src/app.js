@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth.routes')
 const postRoutes = require('./routes/post.routes')
 
 app.use(cors({
-    origin: ['http://localhost:5174', 'https://sk5190.github.io'], // Replace with your frontend's origin
+    origin: ['https://sk5190.github.io'], // Replace with your frontend's origin
     credentials: true,
 }));
 app.use(express.json())
