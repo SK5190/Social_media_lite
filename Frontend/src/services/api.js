@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'https://socialmedialite-production.up.railway.app', // REPLACE WITH YOUR ACTUAL DEPLOYED BACKEND URL
+    baseURL: 'http://socialmedialite-production.up.railway.app', // REPLACE WITH YOUR ACTUAL DEPLOYED BACKEND URL
     withCredentials: true,
 });
 
