@@ -23,11 +23,12 @@ const registerController = async (req , res) => {
         {id: user._id}
         , process.env.JWT_SECRET);
 
-        res.cookie("token",token);
+        res.cookie("token", token, { httpOnly: true, secure: true, sameSite: 'None' });
 
     return res.status(201).json({
         message : "User registered successfully",
-        user
+        user,
+        token
     })
     
 }
@@ -53,7 +54,7 @@ const loginController = async (req , res) => {
 
     const token = jwt.sign({id: user._id}, process.env.JWT_SECRET)
 
-    res.cookie("token",token);
+    res.cookie("token", token, { httpOnly: true, secure: true, sameSite: 'None' });
     
     res.status(200).json({
         message : "User logged in successfully",
