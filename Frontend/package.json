@@ -2,6 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://sk5190.github.io/Social_media_lite",
   "type": "module",
   "scripts": {
     "dev": "vite",
